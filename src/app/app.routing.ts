@@ -8,6 +8,8 @@ import { MoviesComponent } from './movies/movies.component';
 import { NewsComponent } from './news/news.component';
 import { GamingComponent } from './gaming/gaming.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { AdminComponent }   from './admin/admin.component';
+
 
 const appRoutes: Routes = [
   {
@@ -17,6 +19,10 @@ const appRoutes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   },
   {
     path: 'new-post',

@@ -1,23 +1,25 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Post } from '../post.model';
+import { Router } from '@angular/router';
+import { PostService } from '../post.service';
+
 @Component({
   selector: 'new-post',
   templateUrl: './new-post.component.html',
-  styleUrls: ['./new-post.component.css']
+  styleUrls: ['./new-post.component.css'],
+  providers: [PostService]
 })
-export class NewPostComponent  {
-  @Output() newPostSender = new EventEmitter;
+export class NewPostComponent implements OnInit {
+  posts: Post[];
+  constructor(private router: Router, private postService: PostService){}
 
-   newPost(
-   authorName: string,
-   title: string,
-   content: string,
-   category: string,
-   id: number
-   ){
-    var newPost = new Post(authorName, title, content, category,id);
-    this.newPostSender.emit(newPost);
-   }
+  ngOnInit() {
+  }
 
+  submitForm(authorName: string, title: string, content: string, category: string) {
+   var newPost: Post = new Post(authorName, title, content, category);
+   console.log(newPost);
+   this.postService.addPost(newPost);
+ }
 
 }

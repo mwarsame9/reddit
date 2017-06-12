@@ -1,0 +1,20 @@
+{ "posts": [{
+    "authorName" : "Sowmya",
+    "title": "Question Reg Technical Interview",
+    "content": "Is it really important to understand basic software data structures?",
+    "category": "software",
+    "id": "1"
+    }, {
+      "authorName" : "Udai",
+      "title": "I'm watching too many movies these days",
+      "content": "How does excessive screen time increases insomnia?",
+      "category": "stress",
+      "id": "2"
+      }, {
+        "authorName" : "Divya",
+        "title": "I want to find a home in portland ",
+        "content": "Is it hard to find a house in multnamah county?",
+        "category": "real-estate",
+        "id": "3"
+  }]
+}

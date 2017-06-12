@@ -3,7 +3,7 @@
 <a href="#" (click)="showForm = !showForm">{{ showform ? "Hide Form" : "Add a new post"}}</a>
 <form *ngIf="showForm">
   <div class="form-group">
-    <label name="new-author">Author name: </label>
+    <label name="new-author">Name: </label>
     <input #newAuthorName>
   </div>
   <div class="form-group">
@@ -19,5 +19,5 @@
     <input #newCategory>
   </div>
     <br>
-    <button (click)="showForm = false; newPost(newAuthorName.value, newTitle.value, newContent.value, newCategory.value); newAuthorName.value=''; newTitle.value=''; newContent.value=''; newCategory.value='';">Add!</button>
+    <button (click)="submitForm(newAuthorName.value, newTitle.value, newContent.value, newCategory.value); newAuthorName.value=''; newTitle.value=''; newContent.value=''; newCategory.value=''">Add!</button>
 </form>
