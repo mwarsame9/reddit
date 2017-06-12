@@ -1,22 +1,24 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { Post } from '../post.model';
+import { PostService } from '../post.service';
+
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css']
+  styleUrls: ['./welcome.component.css'],
+  providers:[PostService]
 })
 
-export class WelcomeComponent{
+export class WelcomeComponent implements OnInit {
+  posts: Post[];
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private postService: PostService){}
 
-  posts: Post[] = [
-    new Post("Mohamed","Watched the movie passengers?","movies","Whatever", 1),
-    new Post("Sowmya", "Why do I like to listen to emotional songs?", "music","I love to listen to emotional songs when am down...", 2),
-    new Post("Divya", "How easy is to get an apartment in downtown Portland?", "realestate","something something" ,3)
-  ];
+  ngOnInit(){
+  this.posts = this.postService.getPosts();
+  }
 
   goToDetailPage(clickedPost: Post){
     this.router.navigate(['posts', clickedPost.id]);

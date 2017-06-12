@@ -1,15 +1,16 @@
+* {
+  margin: 9px;
+  padding: 0;
+}
+
+
+
 .header{
   margin: 0;
   padding: 0;
   /*background-color: red;*/
 }
-/*
-hr {
-height: 1px;
-color: #123455;
-background-color: #123455;
-border: none;
-}*/
+
 
 #logo{
   width: 185px;
