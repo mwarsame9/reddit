@@ -1,0 +1,20 @@
+.jumbotron{
+  margin: 0;
+  padding: 0;
+}
+
+#logo{
+  width: 200px;
+}
+
+.about{
+  font-size: 23px;
+  text-decoration: none;
+  margin-left: 20px;
+  padding-bottom: 0;
+}
+
+.home{
+  font-size: 23px;
+  text-decoration: none;
+}
