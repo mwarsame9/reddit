@@ -1,1 +1,9 @@
 <h2>Welcome to Reddit!!</h2>
+<h3> Questions Forum </h3>
+
+<div *ngFor="let post of posts" (click)="goToDetailPage(post)" class="blockquote">
+  <h3><em>{{post.title}}</em></h3>
+  <footer class="blockquote-question">
+    by  {{post.authorName}}
+  </footer>
+</div>

@@ -7,12 +7,26 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
 import { AboutComponent } from './about/about.component';
+import { NewPostComponent } from './new-post/new-post.component';
+import { SportsComponent } from './sports/sports.component';
+import { MoviesComponent } from './movies/movies.component';
+import { NewsComponent } from './news/news.component';
+import { GamingComponent } from './gaming/gaming.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    AboutComponent
+    AboutComponent,
+    NewPostComponent,
+    SportsComponent,
+    MoviesComponent,
+    NewsComponent,
+    GamingComponent,
+    PostDetailComponent,
+
   ],
   imports: [
     BrowserModule,
