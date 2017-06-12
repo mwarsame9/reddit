@@ -1,9 +1,23 @@
-
-
-<div class="row">
-  <div class="col-md-6">
-    <h1>Add a new post? </h1>
-    <button class="btn btn-info" type="submit" name="button">Post!</button>
-
+<!-- New form to add a new post -->
+<h1>New Post</h1>
+<a href="#" (click)="showForm = !showForm">{{ showform ? "Hide Form" : "Add a new post"}}</a>
+<form *ngIf="showForm">
+  <div class="form-group">
+    <label name="new-author">Author name: </label>
+    <input #newAuthorName>
   </div>
-</div>
+  <div class="form-group">
+    <label name="new-title">Title:</label>
+    <input #newTitle>
+  </div>
+  <div class="form-group">
+    <label name="new-content">Content</label>
+    <input #newContent>
+  </div>
+  <div class="form-group">
+    <label name="new-category">Category</label>
+    <input #newCategory>
+  </div>
+    <br>
+    <button (click)="showForm = false; newPost(newAuthorName.value, newTitle.value, newContent.value, newCategory.value); newAuthorName.value=''; newTitle.value=''; newContent.value=''; newCategory.value='';">Add!</button>
+</form>

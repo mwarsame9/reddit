@@ -3,33 +3,11 @@
   padding: 0;
 }
 
-
-
 .header{
   margin: 0;
   padding: 0;
   /*background-color: red;*/
 }
-
-
 #logo{
   width: 185px;
-}
-
-.about{
-  font-size: 23px;
-  text-decoration: none;
-  top: 0;
-  margin-left: 20px;
-  padding-bottom: 0;
-}
-
-.home{
-  font-size: 23px;
-  text-decoration: none;
-}
-
-.nav-tabs {
-  font-weight: 400;
-  font-size: 18px;
 }

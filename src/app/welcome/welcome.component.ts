@@ -23,4 +23,8 @@ export class WelcomeComponent implements OnInit {
   goToDetailPage(clickedPost: Post){
     this.router.navigate(['posts', clickedPost.id]);
   };
+
+  addPost(newPost){
+    this.posts.push(newPost);
+  }
 }

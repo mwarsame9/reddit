@@ -1,31 +1,17 @@
 <div class="header">
   <img id="logo" src="/assets/images/logo.png" alt="logo" />
 </div>
-
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" routerLink="">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="about">About</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="new-post">New Post</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="sports">Sports</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="movies">Movies</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="news">News</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="gaming">Gaming</a>
-    </li>
-  </ul>
-
+<div class="bs-example">
+    <ul class="breadcrumb">
+        <li><a routerLink="" >Home</a></li>
+          <li><a routerLink="about" >About</a></li>
+        <li> <a routerLink="new-post" >New Post</a></li>
+          <li><a routerLink="sports" >Sports</a></li>
+          <li><a routerLink="news" >News</a></li>
+          <li><a routerLink="gaming" >Gaming</a></li>
+        <li><a routerLink="movies">Movies</a></li>
+    </ul>
+</div>
 <div class="container">
   <h1></h1>
   <router-outlet></router-outlet>

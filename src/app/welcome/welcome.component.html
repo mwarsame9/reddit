@@ -1,9 +1,17 @@
 <h2>Welcome to Reddit!!</h2>
 <h3> Questions Forum </h3>
+<img src="http://1.bp.blogspot.com/-oY2YNtXaedA/UrGmMMnVXuI/AAAAAAAAiYs/euoGVh0p7PY/s1600/Star_Wars_Funny_gif__0357.GIF">
 
-<div *ngFor="let post of posts" (click)="goToDetailPage(post)" class="blockquote">
-  <h3><em>{{post.title}}</em></h3>
-  <footer class="blockquote-question">
-    by  {{post.authorName}}
-  </footer>
+<div class="row">
+  <div class="col-md-6">
+    <div *ngFor="let post of posts" (click)="goToDetailPage(post)" class="blockquote">
+      <h3><em> <span >{{post.title}}</span></em></h3>
+      <footer class="blockquote-question">by
+        <span style="color:#FF6B6B">{{post.authorName}}</span>
+      </footer>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <new-post (newPostSender)="addPost($event)"></new-post>
+  </div>
 </div>
